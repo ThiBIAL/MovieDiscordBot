@@ -13,7 +13,6 @@ from datetime import date
 import movie_api as api
 from nlu import parse_async
 
-# Entité indispensable pour chaque intent "métier"
 REQUIRED = {
     'movieinfo': 'movie', 'director': 'movie', 'releaseYear': 'movie',
     'actors': 'movie', 'poster': 'movie', 'rating': 'movie',
@@ -21,35 +20,26 @@ REQUIRED = {
 }
 SMALL_TALK = {'greet', 'goodbye', 'thanks', 'help'}
 
-# Mémoire courte par utilisateur :
-#   'movie'   : dernier film dont on a parlé -> "who directed it?" fonctionne
-#   'pending' : intent en attente d'une entité -> le bot a demandé "Which movie?"
 context = {}
 
 COLORS = {'movieinfo': 0x01B4E4, 'director': 0x9B59B6, 'releaseYear': 0x2ECC71,
           'actors': 0xE67E22, 'poster': 0x90CEA1, 'rating': 0xF1C40F, 'filmography': 0xE91E63}
 
 
-# ---------------------------------------------------------------------------
-# Point d'entrée
-# ---------------------------------------------------------------------------
 async def reply(text, user_id, user_name):
     intent, confidence, entities = await parse_async(text)
     print(f"[NLU] {text!r} -> {intent} ({confidence:.2f}) {entities}")
     ctx = context.setdefault(user_id, {'movie': None, 'pending': None})
 
-    # 1) Le bot attendait une réponse à "Which movie?" / "Which person?"
     if ctx['pending'] and _is_answer_to_pending(text, intent, entities, ctx['pending']):
         slot = REQUIRED[ctx['pending']]
         entities = {slot: entities.get(slot) or text.strip()}
         intent = ctx['pending']
     ctx['pending'] = None
 
-    # Message = juste un titre ("interstellar") -> fiche du film, même si l'intent est incertain
     if entities.get('movie') and _norm(entities['movie']) == _norm(text):
         intent = 'movieinfo'
 
-    # 2) Small talk / incompréhension
     if intent == 'greet':
         return {'text': f"Hello {user_name}! 👋 I'm **MovieBot** 🎬\n"
                         "Ask me anything about a movie: plot, director, cast, release date, "
@@ -64,21 +54,19 @@ async def reply(text, user_id, user_name):
     if intent == 'out_of_scope':
         return {'text': f"Sorry {user_name}, I only know about movies 🎬 "
                         "Try *who directed Inception?* or type **help**."}
-    if intent not in REQUIRED:  # 'unclear' ou intent inconnu
+    if intent not in REQUIRED: 
         return {'text': f"Hmm, I'm not sure I understood, {user_name} 🤔 Could you rephrase? "
                         "(type **help** for examples)"}
 
-    # 3) Vérifier l'entité indispensable
     slot = REQUIRED[intent]
     value = entities.get(slot)
     if not value and slot == 'movie' and ctx['movie'] and _refers_to_context(text):
-        value = ctx['movie']          # "who directed it?" -> dernier film évoqué
+        value = ctx['movie']
     if not value:
         ctx['pending'] = intent
         return {'text': "Which movie are you talking about? 🎬" if slot == 'movie'
                 else "Which director or actor are you talking about? 🎭"}
 
-    # 4) Interroger TMDB (requests est bloquant -> thread séparé)
     try:
         if slot == 'movie':
             return await asyncio.to_thread(_movie_answer, intent, value, ctx)
@@ -111,15 +99,12 @@ def _is_answer_to_pending(text, intent, entities, pending):
         return False
     found = entities.get(REQUIRED[pending])
     if found and _norm(found) == _norm(text):
-        return True                     # le message est juste le titre / le nom
+        return True 
     if intent in REQUIRED and intent != pending:
-        return False                    # autre question complète
+        return False
     return True
 
 
-# ---------------------------------------------------------------------------
-# Réponses "film"
-# ---------------------------------------------------------------------------
 def _movie_answer(intent, title, ctx):
     movie_id = api.search_movie(title)
     if movie_id is None:
@@ -179,9 +164,6 @@ def _runtime(minutes):
     return f"{minutes // 60}h{minutes % 60:02d}" if minutes else "Unknown"
 
 
-# ---------------------------------------------------------------------------
-# Réponse "personne"
-# ---------------------------------------------------------------------------
 def _person_answer(name):
     p = api.search_person(name)
     if p is None:

@@ -33,18 +33,11 @@ def image(path):
     return IMAGE_URL + path if path else None
 
 
-# ---------------------------------------------------------------------------
-# Films
-# ---------------------------------------------------------------------------
 def search_movie(title):
     """Renvoie l'id du film le plus pertinent, ou None s'il n'existe pas."""
     results = _get("search/movie", query=title)['results']
     if not results:
         return None
-    # Parmi les 5 premiers résultats on privilégie le film le plus connu (nombre de votes),
-    # avec un bonus x3 si le titre correspond exactement à la recherche :
-    #   "spider man" -> Spider-Man (2002) plutôt que Spider-Man: Homecoming
-    #   "the lord of the rings" -> La Communauté de l'anneau plutôt que le dessin animé de 1978
     def score(m):
         bonus = 3 if _norm(m['title']) == _norm(title) else 1
         return m.get('vote_count', 0) * bonus
@@ -78,9 +71,6 @@ def get_movie(movie_id):
     }
 
 
-# ---------------------------------------------------------------------------
-# Personnes (réalisateurs, acteurs)
-# ---------------------------------------------------------------------------
 def search_person(name):
     results = _get("search/person", query=name)['results']
     if not results:
