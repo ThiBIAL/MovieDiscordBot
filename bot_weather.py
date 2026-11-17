@@ -20,7 +20,6 @@ class MyClient(discord.Client):
 
         print(message.content)
 
-        # Message sans texte (image seule, fichier, sticker...) : Discord refuse d'envoyer un message vide
         if not message.content.strip():
             await message.channel.send("Je ne peux lire que du texte pour l'instant 🙂")
             return

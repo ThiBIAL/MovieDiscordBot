@@ -2,7 +2,6 @@ import asyncio, glob, os
 
 from rasa.core.agent import Agent
 
-# 1. Load the newest trained model (chemin relatif à ce fichier, quel que soit le dossier courant)
 HERE = os.path.dirname(os.path.abspath(__file__))
 latest_model = max(glob.glob(os.path.join(HERE, "models", "*.tar.gz")), key=os.path.getmtime)
 print("Loading", latest_model)
@@ -20,13 +19,11 @@ def interpret(result):
     if confidence < INTENT_THRESHOLD:
         intent = 'unclear'
 
-    # .get(..., 1.0) : certains extracteurs (regex, lookup...) ne donnent pas de confiance
     entities = {e['entity']: e['value'] for e in result['entities']
                 if e.get('confidence_entity', 1.0) >= ENTITY_THRESHOLD}
     return intent, confidence, entities
 
 
-# 2. Function: sentence in -> intent + entities out
 def parse(text):
     """Version synchrone (scripts, tests). NE PAS utiliser dans le bot Discord :
     asyncio.run() plante si une boucle asyncio tourne déjà."""

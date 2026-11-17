@@ -10,7 +10,7 @@ import os
 import discord
 from dotenv import load_dotenv
 
-from movie_bot import reply  # charge aussi le modèle Rasa (quelques secondes)
+from movie_bot import reply
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
@@ -46,7 +46,6 @@ class MyClient(discord.Client):
         if message.author == self.user or message.author.bot:
             return
 
-        # Message sans texte (image seule, fichier, sticker...) : rien à analyser
         if not message.content.strip():
             await message.reply("I can only read text for now 🙂")
             return
@@ -54,7 +53,6 @@ class MyClient(discord.Client):
         async with message.channel.typing():
             answer = await reply(message.content, message.author.id, message.author.display_name)
 
-        # message.reply : réponse "citée" sous le message de l'utilisateur
         await message.reply(**to_discord(answer), mention_author=False)
 
 
