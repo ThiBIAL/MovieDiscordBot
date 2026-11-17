@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Environnements et caches
+.venv/
+rasa_env/
+__pycache__/
+.rasa/
+.vscode/
+
+# Modèles Rasa (régénérables avec : rasa train nlu)
+models/
+
+# Fichiers du prof / zips
+TP2_Discord_bot.pdf
+*.ipynb
+*.zip

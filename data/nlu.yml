@@ -1,0 +1,1642 @@
+version: "3.1"
+
+nlu:
+
+- intent: movieinfo
+  examples: |
+    - Can you describe [Dunkirk](movie)
+    - Describe the movie [mad max fury road](movie) to me ?
+    - Explain the plot of [The Revenant](movie)
+    - Give me a summary of [the untouchables](movie)!
+    - Give me info on [Kill Bill](movie)
+    - Give me info on [The Lion King](movie)
+    - Give me info on [kill bill](movie)?
+    - I want to know more about [spirited away](movie)
+    - I want to know more about [the untouchables](movie)?
+    - I'd like information about [Black Panther](movie)
+    - I'd like information about [dunkirk](movie)
+    - Info about [forrest gump](movie)?
+    - Info about [memento](movie)
+    - Info on the film [Blade Runner](movie) ?
+    - Info on the film [fight club](movie)?
+    - Info on the film [the silence of the lambs](movie)
+    - Info on the film [toy story](movie) ?
+    - Overview of [blade runner](movie)
+    - Summary of [The Untouchables](movie) ?
+    - Summary of [gladiator](movie)
+    - Summary of [saving private ryan](movie)?
+    - Summary of [the hunger games](movie)
+    - Synopsis of [Wall-E](movie)
+    - Tell me about [alien](movie)
+    - Tell me about [jaws](movie)?
+    - Tell me more about the movie [The Lord of the Rings](movie)!
+    - Tell me something about the film [up](movie)?
+    - What do you know about [Top Gun](movie) ?
+    - What happens in [the shawshank redemption](movie)!
+    - What happens in [up](movie)
+    - What happens in [whiplash](movie)?
+    - What is the story of [Terminator](movie)
+    - What is the story of [dune](movie)
+    - What kind of movie is [gravity](movie) ?
+    - What kind of movie is [mission impossible](movie)!
+    - What's [Rocky](movie) about!
+    - What's [the hunger games](movie) about
+    - What's [the lion king](movie) about ?
+    - What's the plot of [The Dark Knight](movie) ?
+    - [Terminator](movie) summary!
+    - [The Dark Knight](movie) plot?
+    - [The Untouchables](movie) plot?
+    - [spirited away](movie) summary?
+    - can you describe [Fight Club](movie)?
+    - can you describe [Rocky](movie) ?
+    - can you describe [memento](movie)
+    - can you describe [the untouchables](movie)
+    - can you tell me about [back to the future](movie)?
+    - describe the movie [coco](movie) to me!
+    - describe the movie [finding nemo](movie) to me!
+    - describe the movie [titanic](movie) to me
+    - do you know the movie [Whiplash](movie)!
+    - do you know the movie [harry potter](movie)?
+    - explain the plot of [Iron Man](movie)
+    - explain the plot of [black panther](movie)
+    - give me a summary of [e.t.](movie)?
+    - give me a summary of [interstellar](movie)
+    - give me a summary of [the prestige](movie)!
+    - give me details about [The Shawshank Redemption](movie)?
+    - give me details about [gone girl](movie)!
+    - give me details about [the lord of the rings](movie)!
+    - give me details about [top gun](movie) ?
+    - give me info on [Back to the Future](movie) ?
+    - give me info on [Psycho](movie)
+    - give me info on [back to the future](movie)
+    - give me info on [inglourious basterds](movie)!
+    - give me info on [jurassic park](movie) ?
+    - give me info on [pulp fiction](movie)
+    - have you heard of [The Untouchables](movie)!
+    - have you heard of [alien](movie)
+    - have you heard of [jaws](movie)
+    - have you heard of [rocky](movie)?
+    - have you heard of [spirited away](movie)!
+    - have you heard of [the godfather](movie)!
+    - i want to know more about [Jurassic Park](movie)
+    - i want to know more about [amelie](movie)!
+    - i want to know more about [the godfather](movie)!
+    - i want to know more about [titanic](movie)
+    - i'd like information about [Blade Runner](movie) ?
+    - i'd like information about [Fight Club](movie)!
+    - info about [The Prestige](movie)!
+    - info about [the matrix](movie)
+    - info about [the shawshank redemption](movie)!
+    - info on the film [Up](movie)
+    - overview of [Inside Out](movie)
+    - overview of [back to the future](movie)
+    - overview of [joker](movie)?
+    - overview of [terminator](movie) ?
+    - summary of [e.t.](movie)
+    - synopsis of [Fight Club](movie)?
+    - synopsis of [barbie](movie)?
+    - synopsis of [pirates of the caribbean](movie) ?
+    - synopsis of [the prestige](movie)
+    - tell me about [Spider Man](movie)
+    - tell me something about the film [Finding Nemo](movie)
+    - tell me something about the film [avengers endgame](movie)
+    - tell me something about the film [django unchained](movie)
+    - what do you know about [amelie](movie)?
+    - what do you know about [finding nemo](movie)
+    - what do you know about [up](movie)!
+    - what happens in [Iron Man](movie)?
+    - what happens in [Shrek](movie)?
+    - what happens in [Spider Man](movie)
+    - what happens in [finding nemo](movie)
+    - what happens in [inception](movie)!
+    - what is [Mission Impossible](movie) about
+    - what is [ratatouille](movie) about!
+    - what is [star wars](movie) about
+    - what is the story of [Whiplash](movie)!
+    - what is the story of [alien](movie) ?
+    - what is the story of [django unchained](movie)
+    - what is the story of [harry potter](movie)!
+    - what is the story of [rocky](movie)!
+    - what kind of movie is [Avengers Endgame](movie)?
+    - what kind of movie is [The Social Network](movie)!
+    - what kind of movie is [alien](movie)!
+    - what kind of movie is [terminator](movie)?
+    - what kind of movie is [the godfather](movie)!
+    - what's [up](movie) about ?
+    - what's the plot of [up](movie)
+    - tell me about [spider-man]{"entity": "movie", "value": "spider man"}
+    - tell me about [lotr]{"entity": "movie", "value": "the lord of the rings"}
+
+- intent: director
+  examples: |
+    - By whom was [titanic](movie) directed?
+    - Director of [inception](movie) ?
+    - Director of [pirates of the caribbean](movie)
+    - Director of [star wars](movie)!
+    - Director of [up](movie)
+    - Do you know who directed [Django Unchained](movie)
+    - Do you know who directed [Inside Out](movie)!
+    - Do you know who directed [Pulp Fiction](movie) ?
+    - Do you know who directed [Schindler's List](movie)
+    - Do you know who directed [dunkirk](movie)
+    - Do you know who directed [kill bill](movie)?
+    - Name the director of [black panther](movie) ?
+    - Name the director of [dunkirk](movie) ?
+    - Name the director of [schindler's list](movie) ?
+    - Name the director of [tenet](movie)?
+    - Tell me the director of [memento](movie) ?
+    - Which director made [The Dark Knight](movie)!
+    - Which director made [the lion king](movie)
+    - Which filmmaker directed [Parasite](movie)!
+    - Which filmmaker directed [Pulp Fiction](movie)!
+    - Who directed [tenet](movie)
+    - Who directed [the untouchables](movie)?
+    - Who directed the movie [The Matrix](movie)!
+    - Who directed the movie [goodfellas](movie)?
+    - Who helmed [Parasite](movie)?
+    - Who helmed [coco](movie)
+    - Who helmed [schindler's list](movie)!
+    - Who helmed [the godfather](movie)?
+    - Who is behind [the prestige](movie)?
+    - Who is the director of [Jaws](movie)?
+    - Who was behind the camera for [blade runner](movie)
+    - Who was the director of the film [barbie](movie)
+    - Who was the filmmaker of [Gone Girl](movie)!
+    - Who was the filmmaker of [Gravity](movie)?
+    - Who's the director of [jurassic park](movie)
+    - Who's the director of [mad max fury road](movie)?
+    - Who's the director of [the revenant](movie)
+    - [Wall-E](movie) was directed by who?
+    - [amelie](movie) director ?
+    - [back to the future](movie) director
+    - [shrek](movie) director
+    - [terminator](movie) was directed by who ?
+    - [the godfather](movie) was directed by who!
+    - by whom was [inception](movie) directed
+    - by whom was [kill bill](movie) directed!
+    - by whom was [mission impossible](movie) directed ?
+    - can you tell me who directed [E.T.](movie) ?
+    - can you tell me who directed [Whiplash](movie)?
+    - can you tell me who directed [amelie](movie) ?
+    - can you tell me who directed [iron man](movie) ?
+    - can you tell me who directed [spirited away](movie)?
+    - director of [the dark knight](movie)
+    - director of [the social network](movie) ?
+    - do you know who directed [Gone Girl](movie)
+    - do you know who directed [Gone Girl](movie)?
+    - do you know who directed [black panther](movie)?
+    - do you know who directed [finding nemo](movie) ?
+    - do you know who directed [kill bill](movie)
+    - do you know who directed [the prestige](movie)
+    - i want to know who directed [Frozen](movie)!
+    - i want to know who directed [Shrek](movie)?
+    - i want to know who directed [The Matrix](movie)!
+    - i want to know who directed [e.t.](movie)?
+    - name the director of [la la land](movie)?
+    - name the director of [toy story](movie)
+    - tell me the director of [avengers endgame](movie)!
+    - tell me the director of [finding nemo](movie)?
+    - tell me the director of [the revenant](movie) ?
+    - which director made [Jaws](movie)
+    - which director made [Se7en](movie)!
+    - which director made [inglourious basterds](movie) ?
+    - which director made [inglourious basterds](movie)!
+    - which director made [iron man](movie)!
+    - which director made [parasite](movie) ?
+    - which filmmaker directed [The Lord of the Rings](movie) ?
+    - which filmmaker directed [inception](movie)!
+    - which filmmaker directed [saving private ryan](movie)?
+    - which filmmaker directed [tenet](movie) ?
+    - which filmmaker directed [the untouchables](movie)?
+    - which filmmaker directed [top gun](movie) ?
+    - which filmmaker directed [toy story](movie)?
+    - who directed [Mission Impossible](movie)?
+    - who directed the movie [Memento](movie) ?
+    - who directed the movie [The Dark Knight](movie)
+    - who directed the movie [Wall-E](movie) ?
+    - who directed the movie [interstellar](movie)!
+    - who filmed [e.t.](movie) ?
+    - who helmed [Jaws](movie)
+    - who helmed [Psycho](movie)?
+    - who helmed [The Godfather](movie)
+    - who is behind [Fight Club](movie)?
+    - who is behind [Goodfellas](movie)!
+    - who is behind [black panther](movie) ?
+    - who is behind [harry potter](movie)
+    - who is behind [inside out](movie)
+    - who is behind [top gun](movie)!
+    - who is the director of [coco](movie)!
+    - who is the director of [joker](movie) ?
+    - who is the director of [rocky](movie) ?
+    - who made [Black Panther](movie)
+    - who made [The Shawshank Redemption](movie)?
+    - who made [Up](movie)!
+    - who made [avatar](movie)!
+    - who made [blade runner](movie)?
+    - who made [gravity](movie)
+    - who was behind the camera for [La La Land](movie)!
+    - who was behind the camera for [The Social Network](movie)?
+    - who was behind the camera for [Top Gun](movie)!
+    - who was behind the camera for [whiplash](movie) ?
+    - who was the director of the film [Psycho](movie) ?
+    - who was the director of the film [shrek](movie)
+    - who was the director of the film [shrek](movie)?
+    - who was the filmmaker of [Spider Man](movie)
+    - who was the filmmaker of [gravity](movie)
+    - who was the filmmaker of [wall-e](movie)
+    - who's the director of [Barbie](movie)
+    - who's the director of [The Silence of the Lambs](movie)!
+    - who's the director of [amelie](movie) ?
+    - who's the director of [django unchained](movie)
+    - who's the director of [forrest gump](movie)
+    - who directed [endgame]{"entity": "movie", "value": "avengers endgame"}
+    - who directed [avengers: endgame]{"entity": "movie", "value": "avengers endgame"}
+    - who directed [dark knight]{"entity": "movie", "value": "the dark knight"}
+
+- intent: releaseYear
+  examples: |
+    - How old is the movie [se7en](movie) ?
+    - How old is the movie [shrek](movie)
+    - In which year was [barbie](movie) released?
+    - Release date of [The Social Network](movie)!
+    - Release date of [spirited away](movie)
+    - Release date of [tenet](movie)
+    - Release year of [Frozen](movie)?
+    - Release year of [jurassic park](movie)
+    - Tell me when [Se7en](movie) was released?
+    - Tell me when [forrest gump](movie) was released!
+    - What is the release date of [Alien](movie) ?
+    - What year did [Gravity](movie) come out
+    - What year did [memento](movie) come out
+    - What year did [tenet](movie) come out
+    - What year is [Casablanca](movie) from
+    - What year was [The Dark Knight](movie) made
+    - What year was [psycho](movie) made ?
+    - When did [E.T.](movie) come out?
+    - When did [Frozen](movie) premiere!
+    - When did [casablanca](movie) come out!
+    - When did [django unchained](movie) premiere?
+    - When did [la la land](movie) come out ?
+    - When did they release [spirited away](movie) ?
+    - When did they release [toy story](movie)
+    - When was [Dunkirk](movie) first shown
+    - When was [E.T.](movie) first shown!
+    - When was [Jaws](movie) first shown
+    - When was [Pulp Fiction](movie) first shown!
+    - When was [Pulp Fiction](movie) released
+    - When was [Spirited Away](movie) first shown ?
+    - When was [joker](movie) out in theaters
+    - When was [psycho](movie) out in theaters
+    - When was [the matrix](movie) released
+    - When was the film [Gladiator](movie) released
+    - When was the film [inglourious basterds](movie) released
+    - When was the film [pulp fiction](movie) released?
+    - Which year did [gravity](movie) premiere?
+    - Which year did [pirates of the caribbean](movie) premiere?
+    - [Blade Runner](movie) release year
+    - [Gone Girl](movie) came out when?
+    - [Parasite](movie) release date ?
+    - [Pirates of the Caribbean](movie) release year ?
+    - [Schindler's List](movie) came out when
+    - [The Revenant](movie) release date ?
+    - [The Social Network](movie) came out when!
+    - [Up](movie) release year!
+    - [gladiator](movie) release year!
+    - [gladiator](movie) release year?
+    - [gone girl](movie) came out when!
+    - [inglourious basterds](movie) release year
+    - [jaws](movie) release date!
+    - [memento](movie) release year!
+    - [mission impossible](movie) release year
+    - [oppenheimer](movie) release date!
+    - [pirates of the caribbean](movie) came out when
+    - [pulp fiction](movie) release year?
+    - [saving private ryan](movie) came out when
+    - [schindler's list](movie) release year
+    - [se7en](movie) came out when
+    - [the godfather](movie) release year
+    - [the lion king](movie) came out when!
+    - do you know when [psycho](movie) came out
+    - do you know when [pulp fiction](movie) came out
+    - do you know when [shrek](movie) came out ?
+    - do you know when [the matrix](movie) came out
+    - how old is the movie [toy story](movie) ?
+    - in which year was [Gone Girl](movie) released
+    - in which year was [inside out](movie) released!
+    - release date of [Pirates of the Caribbean](movie) ?
+    - release date of [The Social Network](movie)?
+    - release date of [black panther](movie)
+    - release date of [blade runner](movie)?
+    - release date of [forrest gump](movie) ?
+    - release year of [back to the future](movie)
+    - release year of [saving private ryan](movie)?
+    - release year of [terminator](movie) ?
+    - tell me when [Spirited Away](movie) was released
+    - tell me when [avatar](movie) was released!
+    - tell me when [gone girl](movie) was released
+    - tell me when [jaws](movie) was released ?
+    - tell me when [memento](movie) was released ?
+    - tell me when [the godfather](movie) was released!
+    - tell me when [whiplash](movie) was released
+    - tell me when [whiplash](movie) was released ?
+    - what is the release date of [frozen](movie)!
+    - what is the release date of [spirited away](movie)?
+    - what is the release date of [the lord of the rings](movie)?
+    - what year did [pulp fiction](movie) come out ?
+    - what year did [ratatouille](movie) come out
+    - what year did [rocky](movie) come out!
+    - what year did [whiplash](movie) come out
+    - what year is [black panther](movie) from
+    - what year is [coco](movie) from?
+    - what year is [fight club](movie) from?
+    - what year is [joker](movie) from ?
+    - what year is [kill bill](movie) from?
+    - what year is [toy story](movie) from ?
+    - what year is [up](movie) from?
+    - what year was [gravity](movie) made ?
+    - what year was [the hunger games](movie) made
+    - what year was [the matrix](movie) made
+    - when did [Goodfellas](movie) hit the cinemas?
+    - when did [Top Gun](movie) premiere!
+    - when did [avengers endgame](movie) come out
+    - when did [iron man](movie) premiere
+    - when did [saving private ryan](movie) come out?
+    - when did [the revenant](movie) hit the cinemas
+    - when did they release [The Silence of the Lambs](movie)
+    - when did they release [The Silence of the Lambs](movie)!
+    - when did they release [mission impossible](movie)
+    - when did they release [spider man](movie)?
+    - when was [Avengers Endgame](movie) out in theaters
+    - when was [Dune](movie) first shown!
+    - when was [gladiator](movie) first shown?
+    - when was [gone girl](movie) out in theaters?
+    - when was [parasite](movie) released?
+    - when was [saving private ryan](movie) out in theaters ?
+    - when was the film [Pirates of the Caribbean](movie) released?
+    - which year did [back to the future](movie) premiere ?
+    - which year did [the dark knight](movie) premiere?
+    - when was [starwars]{"entity": "movie", "value": "star wars"} released
+
+- intent: actors
+  examples: |
+    - Cast of [Casablanca](movie)!
+    - Cast of [back to the future](movie)!
+    - Cast of [rocky](movie) ?
+    - Give me the cast of [gladiator](movie)
+    - List the actors of [Star Wars](movie)?
+    - Tell me the cast of [pulp fiction](movie)!
+    - Which actors are in [Avatar](movie)!
+    - Which actors are in [casablanca](movie)?
+    - Who acted in [Casablanca](movie)?
+    - Who are the actors of [Finding Nemo](movie)?
+    - Who are the actors of [whiplash](movie)
+    - Who are the main actors of [harry potter](movie)
+    - Who played in [the untouchables](movie)?
+    - Who plays the lead in [Se7en](movie)
+    - Who plays the lead in [the silence of the lambs](movie)
+    - Who starred in [spirited away](movie)!
+    - Who stars in [star wars](movie) ?
+    - Who was the main actor in [Goodfellas](movie) ?
+    - Who was the main actor in [Top Gun](movie)!
+    - Who was the main actor in [barbie](movie)!
+    - Who was the main actor in [the silence of the lambs](movie) ?
+    - Who was the main actress in [schindler's list](movie)?
+    - Who was the star of [Casablanca](movie)
+    - Who was the star of [spider man](movie)!
+    - Who was the star of [the prestige](movie)!
+    - Who's in the movie [se7en](movie)!
+    - Who's in the movie [the lord of the rings](movie)
+    - [Black Panther](movie) cast ?
+    - [Harry Potter](movie) cast
+    - [Toy Story](movie) actors ?
+    - [avatar](movie) cast!
+    - [casablanca](movie) actors!
+    - [memento](movie) cast
+    - [psycho](movie) cast
+    - [se7en](movie) actors
+    - [the hunger games](movie) actors!
+    - cast of [Forrest Gump](movie) ?
+    - cast of [The Shawshank Redemption](movie)
+    - cast of [coco](movie)!
+    - cast of [jaws](movie) ?
+    - cast of [the revenant](movie)?
+    - give me the cast of [barbie](movie)
+    - give me the cast of [casablanca](movie)?
+    - give me the cast of [fight club](movie)
+    - give me the cast of [forrest gump](movie)
+    - give me the cast of [mission impossible](movie)?
+    - give me the cast of [the shawshank redemption](movie) ?
+    - list the actors of [The Shawshank Redemption](movie)!
+    - list the actors of [pulp fiction](movie)?
+    - main actor of [The Hunger Games](movie)
+    - main actor of [the untouchables](movie)
+    - show me the actors of [Alien](movie)?
+    - show me the actors of [Gladiator](movie) ?
+    - show me the actors of [goodfellas](movie)?
+    - show me the actors of [jaws](movie) ?
+    - show me the actors of [up](movie) ?
+    - show me the actors of [wall-e](movie) ?
+    - tell me the cast of [Alien](movie)
+    - tell me the cast of [Oppenheimer](movie) ?
+    - tell me the cast of [dune](movie)?
+    - tell me the cast of [memento](movie)
+    - tell me the cast of [toy story](movie) ?
+    - tell me the cast of [toy story](movie)?
+    - what actors played in [Ratatouille](movie)?
+    - what actors played in [alien](movie)!
+    - what actors played in [blade runner](movie)
+    - what actors played in [blade runner](movie)!
+    - what actors played in [the social network](movie)
+    - what actors played in [whiplash](movie) ?
+    - which actors are in [Rocky](movie) ?
+    - which actors are in [alien](movie)
+    - which actors are in [black panther](movie)!
+    - which actors are in [joker](movie)?
+    - which actors are in [whiplash](movie)!
+    - who acted in [Inside Out](movie)?
+    - who acted in [Pirates of the Caribbean](movie)
+    - who acted in [Schindler's List](movie)!
+    - who are the actors of [inception](movie)
+    - who are the actors of [mad max fury road](movie)
+    - who are the actors of [the lion king](movie) ?
+    - who are the main actors of [blade runner](movie)
+    - who are the main actors of [dune](movie)!
+    - who are the main actors of [the lion king](movie) ?
+    - who are the main actors of [top gun](movie)
+    - who is in [Gone Girl](movie)?
+    - who is in [Inglourious Basterds](movie)
+    - who is in [gone girl](movie)?
+    - who is in [inside out](movie)!
+    - who is in [pirates of the caribbean](movie) ?
+    - who is in [the lion king](movie)
+    - who played in [forrest gump](movie)
+    - who played in [frozen](movie) ?
+    - who played in [interstellar](movie)!
+    - who played in [saving private ryan](movie) ?
+    - who plays the lead in [Oppenheimer](movie) ?
+    - who plays the lead in [The Lion King](movie)!
+    - who plays the lead in [dune](movie)
+    - who plays the lead in [finding nemo](movie)!
+    - who starred in [Gladiator](movie) ?
+    - who starred in [Spider Man](movie)!
+    - who starred in [avatar](movie)
+    - who starred in [casablanca](movie) ?
+    - who starred in [dunkirk](movie)
+    - who starred in [star wars](movie)
+    - who stars in [saving private ryan](movie)!
+    - who stars in [terminator](movie)
+    - who stars in [the lion king](movie)?
+    - who was the main actor in [Toy Story](movie) ?
+    - who was the main actor in [harry potter](movie)
+    - who was the main actor in [interstellar](movie)
+    - who was the main actress in [La La Land](movie)
+    - who was the main actress in [Parasite](movie)
+    - who was the main actress in [inglourious basterds](movie) ?
+    - who was the star of [Terminator](movie)!
+    - who was the star of [dune](movie)?
+    - who was the star of [finding nemo](movie)!
+    - who's in the movie [Inside Out](movie) ?
+    - who's in the movie [The Revenant](movie)!
+    - who's in the movie [django unchained](movie)
+    - who's in the movie [mad max fury road](movie) ?
+
+- intent: poster
+  examples: |
+    - Affiche of [joker](movie)?
+    - Affiche of [wall-e](movie)?
+    - Can i see the poster for [Shrek](movie) ?
+    - Can you send a picture of [pulp fiction](movie)
+    - Display the poster of [The Revenant](movie) ?
+    - Display the poster of [blade runner](movie)
+    - Display the poster of [e.t.](movie) ?
+    - Get me the poster of [kill bill](movie)
+    - Get me the poster of [se7en](movie)
+    - Get me the poster of [star wars](movie)
+    - I want to see the poster of [Dune](movie)
+    - I want to see the poster of [Terminator](movie)
+    - I want to see the poster of [schindler's list](movie) ?
+    - Image of the movie [rocky](movie)
+    - Let me see the [Wall-E](movie) poster!
+    - Send me the poster of [the lion king](movie) ?
+    - Send the movie poster of [The Social Network](movie)?
+    - Send the movie poster of [tenet](movie)?
+    - Show [inglourious basterds](movie) poster?
+    - Show [the lord of the rings](movie) poster?
+    - Show [the shawshank redemption](movie) poster
+    - Show me an image of [gone girl](movie)!
+    - Show me the poster of [black panther](movie)
+    - Show me the poster of [mad max fury road](movie)?
+    - Show me what [avengers endgame](movie) looks like?
+    - The poster of [gladiator](movie) please
+    - The poster of [harry potter](movie) please
+    - The poster of [kill bill](movie) please ?
+    - What does the poster of [Tenet](movie) look like!
+    - What does the poster of [spirited away](movie) look like!
+    - [Goodfellas](movie) poster
+    - [The Godfather](movie) poster!
+    - [amelie](movie) poster!
+    - [inglourious basterds](movie) poster
+    - [joker](movie) poster!
+    - affiche of [Parasite](movie) ?
+    - affiche of [Titanic](movie) ?
+    - affiche of [inside out](movie) ?
+    - affiche of [the lion king](movie)
+    - affiche of [the shawshank redemption](movie)
+    - can i see the poster for [Gravity](movie)
+    - can i see the poster for [django unchained](movie)?
+    - can i see the poster for [inside out](movie)?
+    - can you send a picture of [Pulp Fiction](movie)?
+    - can you send a picture of [joker](movie)?
+    - display the poster of [Mission Impossible](movie)!
+    - display the poster of [la la land](movie)
+    - display the poster of [pirates of the caribbean](movie)?
+    - display the poster of [the hunger games](movie)
+    - get me the poster of [Mission Impossible](movie)
+    - get me the poster of [The Matrix](movie) ?
+    - get me the poster of [Wall-E](movie) ?
+    - get me the poster of [gladiator](movie) ?
+    - give me the [Rocky](movie) poster!
+    - give me the [The Lord of the Rings](movie) poster
+    - give me the [avatar](movie) poster ?
+    - give me the [the lion king](movie) poster
+    - give me the [the lion king](movie) poster ?
+    - i want to see the poster of [The Hunger Games](movie)?
+    - i want to see the poster of [black panther](movie)
+    - i want to see the poster of [harry potter](movie)!
+    - i want to see the poster of [memento](movie)?
+    - i want to see the poster of [the prestige](movie) ?
+    - i'd like to see the poster of [memento](movie)!
+    - i'd like to see the poster of [rocky](movie)
+    - i'd like to see the poster of [rocky](movie) ?
+    - image of the movie [Kill Bill](movie)!
+    - image of the movie [back to the future](movie)?
+    - image of the movie [inception](movie)
+    - image of the movie [la la land](movie)!
+    - image of the movie [mad max fury road](movie)?
+    - image of the movie [pulp fiction](movie) ?
+    - image of the movie [spirited away](movie) ?
+    - image of the movie [the dark knight](movie)
+    - image of the movie [the godfather](movie) ?
+    - image of the movie [the lion king](movie)!
+    - let me see the [Harry Potter](movie) poster?
+    - let me see the [Rocky](movie) poster?
+    - let me see the [the lord of the rings](movie) poster
+    - let me see the [the matrix](movie) poster ?
+    - let me see the [the shawshank redemption](movie) poster
+    - picture of [The Matrix](movie)
+    - picture of [forrest gump](movie)
+    - picture of [forrest gump](movie)?
+    - picture of [gladiator](movie)!
+    - poster for [shrek](movie)
+    - poster for [the silence of the lambs](movie) ?
+    - send me the poster of [blade runner](movie)?
+    - send me the poster of [frozen](movie) ?
+    - send me the poster of [interstellar](movie)
+    - send the movie poster of [Django Unchained](movie)
+    - send the movie poster of [Jaws](movie)
+    - send the movie poster of [the prestige](movie) ?
+    - show [black panther](movie) poster ?
+    - show [dunkirk](movie) poster ?
+    - show [fight club](movie) poster
+    - show [spider man](movie) poster ?
+    - show me an image of [Inception](movie)?
+    - show me an image of [parasite](movie) ?
+    - show me the cover of [Inception](movie)
+    - show me the cover of [Ratatouille](movie)
+    - show me the cover of [The Prestige](movie) ?
+    - show me the cover of [gone girl](movie)
+    - show me the cover of [wall-e](movie)?
+    - show me what [Spirited Away](movie) looks like
+    - show me what [The Hunger Games](movie) looks like?
+    - show me what [The Matrix](movie) looks like
+    - show me what [la la land](movie) looks like
+    - the poster of [Blade Runner](movie) please
+    - the poster of [Pirates of the Caribbean](movie) please?
+    - the poster of [Whiplash](movie) please ?
+    - the poster of [Whiplash](movie) please!
+    - the poster of [psycho](movie) please ?
+    - the poster of [the shawshank redemption](movie) please ?
+    - the poster of [the silence of the lambs](movie) please
+    - the poster of [titanic](movie) please!
+    - what does the poster of [Forrest Gump](movie) look like!
+    - what does the poster of [Jurassic Park](movie) look like ?
+    - what does the poster of [interstellar](movie) look like!
+    - what does the poster of [parasite](movie) look like!
+
+- intent: rating
+  examples: |
+    - Average rating for [shrek](movie)
+    - Average rating for [the shawshank redemption](movie) ?
+    - Do people like [Gone Girl](movie)?
+    - Do people like [The Matrix](movie)!
+    - Do people like [tenet](movie)?
+    - How good is [interstellar](movie)?
+    - How good is [pirates of the caribbean](movie)
+    - How good is [the silence of the lambs](movie)
+    - How is [psycho](movie) rated?
+    - How many stars does [Toy Story](movie) have!
+    - How many stars does [casablanca](movie) have
+    - How many stars does [pulp fiction](movie) have
+    - How many stars does [terminator](movie) have
+    - Is [Gone Girl](movie) worth watching?
+    - Is [Mission Impossible](movie) worth watching ?
+    - Is [avengers endgame](movie) good
+    - Is [inside out](movie) good
+    - Is [star wars](movie) good!
+    - Is [tenet](movie) a good movie?
+    - Is the movie [Ratatouille](movie) good ?
+    - Rating of [Harry Potter](movie)
+    - Rating of [Up](movie)
+    - Rating of [the lord of the rings](movie)
+    - Rating of [whiplash](movie)?
+    - Review score of [jaws](movie)
+    - Should i watch [harry potter](movie)?
+    - What do people think of [Se7en](movie)!
+    - What do people think of [top gun](movie)
+    - What grade does [The Untouchables](movie) have
+    - What is the rating of [the silence of the lambs](movie)!
+    - What score did [Finding Nemo](movie) get?
+    - What score did [Gone Girl](movie) get
+    - What score did [Rocky](movie) get
+    - What score did [forrest gump](movie) get
+    - What score did [tenet](movie) get ?
+    - What's the score of [Shrek](movie) ?
+    - What's the score of [The Revenant](movie)
+    - What's the score of [avatar](movie)!
+    - What's the score of [inception](movie)
+    - What's the score of [kill bill](movie)
+    - [Goodfellas](movie) rating?
+    - [Saving Private Ryan](movie) rating?
+    - [Tenet](movie) score
+    - [back to the future](movie) rating?
+    - [inglourious basterds](movie) score
+    - [inside out](movie) rating?
+    - [iron man](movie) rating ?
+    - [the godfather](movie) score?
+    - [titanic](movie) rating ?
+    - [wall-e](movie) score!
+    - average rating for [Goodfellas](movie)
+    - average rating for [Top Gun](movie)?
+    - average rating for [the shawshank redemption](movie) ?
+    - how good is [Barbie](movie)!
+    - how good is [up](movie)!
+    - how is [Django Unchained](movie) rated
+    - how is [Inglourious Basterds](movie) rated!
+    - how is [The Shawshank Redemption](movie) rated
+    - how is [barbie](movie) rated
+    - how is [toy story](movie) rated?
+    - how many stars does [Goodfellas](movie) have ?
+    - how many stars does [The Revenant](movie) have ?
+    - how many stars does [gladiator](movie) have
+    - how many stars does [the untouchables](movie) have
+    - how many stars does [wall-e](movie) have
+    - how well rated is [Jaws](movie)
+    - how well rated is [The Matrix](movie)
+    - how well rated is [amelie](movie)
+    - how well rated is [psycho](movie)!
+    - is [Avatar](movie) worth watching ?
+    - is [Dunkirk](movie) good?
+    - is [Gladiator](movie) any good
+    - is [Interstellar](movie) good
+    - is [Kill Bill](movie) a good movie
+    - is [Kill Bill](movie) worth watching?
+    - is [The Godfather](movie) any good!
+    - is [The Shawshank Redemption](movie) good
+    - is [barbie](movie) a good movie?
+    - is [blade runner](movie) good!
+    - is [finding nemo](movie) worth watching?
+    - is [gladiator](movie) worth watching?
+    - is [iron man](movie) any good
+    - is [mission impossible](movie) any good!
+    - is [psycho](movie) any good
+    - is [star wars](movie) good?
+    - is [tenet](movie) good
+    - is [the hunger games](movie) worth watching ?
+    - is the movie [Terminator](movie) good
+    - is the movie [The Shawshank Redemption](movie) good
+    - rating of [Jaws](movie)?
+    - rating of [Memento](movie)
+    - rating of [Mission Impossible](movie)?
+    - rating of [avatar](movie)
+    - rating of [inside out](movie)!
+    - review score of [Dune](movie) ?
+    - review score of [jurassic park](movie)!
+    - review score of [whiplash](movie) ?
+    - should i watch [jaws](movie)
+    - should i watch [terminator](movie)
+    - should i watch [the lion king](movie)
+    - what do people think of [Joker](movie) ?
+    - what do people think of [the godfather](movie)!
+    - what do people think of [the lord of the rings](movie)
+    - what grade does [Titanic](movie) have!
+    - what grade does [frozen](movie) have ?
+    - what grade does [jurassic park](movie) have
+    - what grade does [memento](movie) have
+    - what grade does [the dark knight](movie) have!
+    - what is the rating of [star wars](movie)
+    - what score did [Dunkirk](movie) get!
+    - what score did [the silence of the lambs](movie) get ?
+    - what's [Black Panther](movie) rated?
+    - what's [Django Unchained](movie) rated
+    - what's [The Lion King](movie) rated ?
+    - what's [iron man](movie) rated?
+    - what's the score of [Inception](movie)
+    - what's the score of [dune](movie) ?
+    - what's the score of [pirates of the caribbean](movie)?
+    - what's the score of [rocky](movie)
+    - what's the score of [the dark knight](movie)?
+    - is [spiderman]{"entity": "movie", "value": "spider man"} good
+    - is [lord of the rings]{"entity": "movie", "value": "the lord of the rings"} good
+
+- intent: filmography
+  examples: |
+    - Best films with [emma stone](person)!
+    - Best films with [natalie portman](person)
+    - Filmography of [james cameron](person)
+    - Filmography of [keanu reeves](person)
+    - Filmography of [keanu reeves](person) ?
+    - Give me a movie by [natalie portman](person)?
+    - Give me a movie by [robert de niro](person)
+    - Give me films by [anne hathaway](person)
+    - List the movies of [Joaquin Phoenix](person) ?
+    - List the movies of [robert downey jr](person)!
+    - Movies directed by [Jennifer Lawrence](person) ?
+    - Movies directed by [tom hanks](person) ?
+    - Recommend me a movie with [Wes Anderson](person)
+    - Recommend me a movie with [johnny depp](person)!
+    - Show me movies starring [Harrison Ford](person)
+    - Show me movies starring [Meryl Streep](person)
+    - Show me movies starring [ridley scott](person)
+    - Show me movies starring [scarlett johansson](person)
+    - What are the best movies of [Martin Scorsese](person)
+    - What are the best movies of [david fincher](person)
+    - What are the best movies of [steven spielberg](person)
+    - What are the best movies of [wes anderson](person)
+    - What did [Natalie Portman](person) play in ?
+    - What did [brad pitt](person) play in
+    - What did [cillian murphy](person) play in
+    - What has [al pacino](person) directed
+    - What has [meryl streep](person) directed
+    - What movies did [Emma Stone](person) play in!
+    - Which films is [brad pitt](person) known for
+    - Which films is [meryl streep](person) known for
+    - Which films is [steven spielberg](person) known for
+    - Which movies did [zendaya](person) direct ?
+    - [Christopher Nolan](person) filmography?
+    - [Denzel Washington](person) filmography?
+    - [Steven Spielberg](person) movies
+    - [harrison ford](person) movies
+    - [margot robbie](person) movies!
+    - [ryan gosling](person) filmography!
+    - [zendaya](person) movies
+    - best films with [Tom Hanks](person)?
+    - best films with [christopher nolan](person)
+    - best films with [greta gerwig](person)
+    - best films with [jennifer lawrence](person) ?
+    - best films with [quentin tarantino](person)!
+    - best films with [robert downey jr](person)?
+    - famous movies of [Brad Pitt](person) ?
+    - famous movies of [al pacino](person)
+    - famous movies of [anne hathaway](person)!
+    - famous movies of [greta gerwig](person) ?
+    - famous movies of [martin scorsese](person)!
+    - famous movies of [steven spielberg](person)
+    - famous movies of [tim burton](person)?
+    - filmography of [Christopher Nolan](person)
+    - filmography of [Joaquin Phoenix](person)!
+    - filmography of [bong joon-ho](person) ?
+    - filmography of [meryl streep](person)?
+    - filmography of [tom cruise](person)
+    - give me a movie by [Ryan Gosling](person)?
+    - give me a movie by [anne hathaway](person)
+    - give me a movie by [denis villeneuve](person)
+    - give me a movie by [tim burton](person)!
+    - give me a movie by [tom cruise](person)!
+    - give me films by [brad pitt](person)
+    - give me films by [jennifer lawrence](person) ?
+    - give me films by [peter jackson](person)!
+    - i like [Brad Pitt](person), what should i watch!
+    - i like [david fincher](person), what should i watch
+    - i like [robert downey jr](person), what should i watch ?
+    - in which movies did [Jennifer Lawrence](person) act
+    - in which movies did [Margot Robbie](person) act!
+    - in which movies did [brad pitt](person) act
+    - list the movies of [Harrison Ford](person)
+    - list the movies of [Wes Anderson](person)
+    - list the movies of [denis villeneuve](person) ?
+    - list the movies of [emma stone](person)?
+    - list the movies of [james cameron](person) ?
+    - list the movies of [tom cruise](person) ?
+    - movies directed by [Cillian Murphy](person)?
+    - movies directed by [Denis Villeneuve](person)
+    - movies directed by [Zendaya](person)!
+    - movies with [Joaquin Phoenix](person)!
+    - movies with [Johnny Depp](person) ?
+    - movies with [Natalie Portman](person)
+    - movies with [denis villeneuve](person) ?
+    - movies with [keanu reeves](person)!
+    - movies with [margot robbie](person)?
+    - movies with [zendaya](person)
+    - recommend me a movie with [Greta Gerwig](person)
+    - recommend me a movie with [christian bale](person) ?
+    - recommend me a movie with [denis villeneuve](person)
+    - show me movies starring [anne hathaway](person)
+    - tell me movies with [Martin Scorsese](person)
+    - tell me movies with [robert downey jr](person)
+    - tell me movies with [robert downey jr](person)?
+    - tell me movies with [zendaya](person)
+    - what are [Leonardo DiCaprio](person)'s films
+    - what are [johnny depp](person)'s films?
+    - what are the best movies of [Cillian Murphy](person) ?
+    - what are the best movies of [Tom Cruise](person)!
+    - what are the best movies of [brad pitt](person)?
+    - what are the best movies of [natalie portman](person)!
+    - what are the best movies of [peter jackson](person)!
+    - what are the best movies of [steven spielberg](person)
+    - what did [peter jackson](person) play in ?
+    - what did [quentin tarantino](person) play in?
+    - what did [steven spielberg](person) play in?
+    - what films has [Denzel Washington](person) made ?
+    - what films has [Tom Cruise](person) made?
+    - what films has [brad pitt](person) made
+    - what films has [robert de niro](person) made
+    - what films has [scarlett johansson](person) made?
+    - what has [natalie portman](person) directed
+    - what has [ryan gosling](person) directed
+    - which films is [Greta Gerwig](person) known for!
+    - which films is [christian bale](person) known for?
+    - which films is [robert downey jr](person) known for
+    - which films is [scarlett johansson](person) known for!
+    - which movies did [bong joon-ho](person) direct?
+    - which movies did [christopher nolan](person) direct
+    - which movies did [martin scorsese](person) direct ?
+
+- intent: greet
+  examples: |
+    - bonjour bot
+    - bonjour buddy
+    - bonjour everyone
+    - bonjour friend
+    - bonjour moviebot
+    - bonjour, how are you
+    - bonjour, how's it going
+    - good afternoon
+    - good afternoon bot
+    - good afternoon buddy
+    - good afternoon everyone
+    - good afternoon friend
+    - good afternoon moviebot
+    - good afternoon!
+    - good afternoon, how are you
+    - good afternoon, how's it going
+    - good evening
+    - good evening bot
+    - good evening buddy
+    - good evening everyone
+    - good evening!
+    - good morning
+    - good morning everyone
+    - good morning friend
+    - good morning moviebot
+    - good morning, how are you
+    - greetings
+    - greetings bot
+    - greetings everyone
+    - greetings friend
+    - greetings moviebot
+    - greetings!
+    - greetings, how are you
+    - greetings, how's it going
+    - hello
+    - hello bot
+    - hello buddy
+    - hello there
+    - hello there bot
+    - hello there buddy
+    - hello there everyone
+    - hello there friend
+    - hello there moviebot
+    - hello there!
+    - hello there, how are you
+    - hello!
+    - hello, how are you
+    - hello, how's it going
+    - hey
+    - hey buddy
+    - hey everyone
+    - hey friend
+    - hey hey
+    - hey hey bot
+    - hey hey buddy
+    - hey hey everyone
+    - hey hey friend
+    - hey hey moviebot
+    - hey hey, how's it going
+    - hey moviebot
+    - hey there
+    - hey there bot
+    - hey there everyone
+    - hey there friend
+    - hey there moviebot
+    - hey there!
+    - hey there, how are you
+    - hey!
+    - hey, how are you
+    - heya
+    - heya bot
+    - heya buddy
+    - heya everyone
+    - heya!
+    - heya, how are you
+    - heya, how's it going
+    - hi
+    - hi bot
+    - hi buddy
+    - hi friend
+    - hi hi bot
+    - hi hi friend
+    - hi hi, how are you
+    - hi, how are you
+    - hiya bot
+    - hiya buddy
+    - hiya everyone
+    - hiya friend
+    - hiya moviebot
+    - hiya, how are you
+    - hiya, how's it going
+    - howdy
+    - howdy bot
+    - howdy buddy
+    - howdy friend
+    - howdy moviebot
+    - howdy!
+    - howdy, how's it going
+    - morning
+    - morning bot
+    - morning buddy
+    - morning friend
+    - morning moviebot
+    - morning, how are you
+    - salut
+    - salut bot
+    - salut buddy
+    - salut everyone
+    - salut friend
+    - salut moviebot
+    - salut!
+    - salut, how are you
+    - salut, how's it going
+    - yo
+    - yo bot
+    - yo everyone
+    - yo friend
+    - yo moviebot
+    - yo, how are you
+    - yo, how's it going
+
+- intent: goodbye
+  examples: |
+    - au revoir
+    - au revoir bot
+    - au revoir for now
+    - au revoir friend
+    - au revoir moviebot
+    - au revoir!
+    - au revoir, thanks
+    - bye
+    - bye :)
+    - bye bot
+    - bye bye
+    - bye bye :)
+    - bye bye bot
+    - bye bye for now
+    - bye bye friend
+    - bye bye moviebot
+    - bye bye!
+    - bye bye, thanks
+    - bye for now
+    - bye friend
+    - bye moviebot
+    - bye!
+    - bye, thanks
+    - catch you later
+    - catch you later :)
+    - catch you later bot
+    - catch you later for now
+    - catch you later friend
+    - catch you later moviebot
+    - catch you later!
+    - catch you later, thanks
+    - ciao
+    - ciao :)
+    - ciao bot
+    - ciao friend
+    - ciao!
+    - ciao, thanks
+    - farewell
+    - farewell :)
+    - farewell bot
+    - farewell for now
+    - farewell friend
+    - farewell moviebot
+    - farewell!
+    - farewell, thanks
+    - good night
+    - good night :)
+    - good night bot
+    - good night for now
+    - good night friend
+    - good night moviebot
+    - good night!
+    - good night, thanks
+    - goodbye
+    - goodbye :)
+    - goodbye bot
+    - goodbye for now
+    - goodbye friend
+    - goodbye moviebot
+    - goodbye!
+    - goodbye, thanks
+    - i have to go
+    - i have to go :)
+    - i have to go bot
+    - i have to go for now
+    - i have to go friend
+    - i have to go moviebot
+    - i have to go!
+    - i have to go, thanks
+    - i'm leaving
+    - i'm leaving :)
+    - i'm leaving bot
+    - i'm leaving friend
+    - i'm leaving moviebot
+    - i'm leaving!
+    - i'm leaving, thanks
+    - later
+    - later :)
+    - later bot
+    - later for now
+    - later friend
+    - later moviebot
+    - later!
+    - later, thanks
+    - see ya
+    - see ya bot
+    - see ya for now
+    - see ya friend
+    - see ya moviebot
+    - see ya!
+    - see ya, thanks
+    - see you
+    - see you :)
+    - see you bot
+    - see you for now
+    - see you friend
+    - see you later
+    - see you later :)
+    - see you later for now
+    - see you later friend
+    - see you later!
+    - see you later, thanks
+    - see you moviebot
+    - see you!
+    - see you, thanks
+    - take care
+    - take care :)
+    - take care bot
+    - take care for now
+    - take care friend
+    - take care moviebot
+    - take care!
+    - take care, thanks
+    - talk to you later :)
+    - talk to you later bot
+    - talk to you later for now
+    - talk to you later friend
+    - talk to you later moviebot
+    - talk to you later!
+    - talk to you later, thanks
+
+- intent: thanks
+  examples: |
+    - awesome thanks
+    - awesome thanks :)
+    - awesome thanks a lot
+    - awesome thanks bot
+    - awesome thanks buddy
+    - awesome thanks moviebot
+    - awesome thanks!
+    - awesome thanks, that's perfect
+    - cheers
+    - cheers :)
+    - cheers a lot
+    - cheers bot
+    - cheers buddy
+    - cheers moviebot
+    - cheers!
+    - cheers, that's perfect
+    - cool thanks
+    - cool thanks :)
+    - cool thanks a lot
+    - cool thanks bot
+    - cool thanks buddy
+    - cool thanks moviebot
+    - cool thanks!
+    - cool thanks, that's perfect
+    - great thanks
+    - great thanks :)
+    - great thanks a lot
+    - great thanks bot
+    - great thanks buddy
+    - great thanks moviebot
+    - great thanks!
+    - great thanks, that's perfect
+    - many thanks
+    - many thanks :)
+    - many thanks a lot
+    - many thanks bot
+    - many thanks buddy
+    - many thanks moviebot
+    - many thanks!
+    - many thanks, that's perfect
+    - merci
+    - merci :)
+    - merci a lot
+    - merci bot
+    - merci buddy
+    - merci moviebot
+    - merci!
+    - merci, that's perfect
+    - much appreciated
+    - much appreciated :)
+    - much appreciated a lot
+    - much appreciated bot
+    - much appreciated buddy
+    - much appreciated moviebot
+    - much appreciated!
+    - much appreciated, that's perfect
+    - perfect thank you
+    - perfect thank you a lot
+    - perfect thank you bot
+    - perfect thank you buddy
+    - perfect thank you!
+    - perfect thank you, that's perfect
+    - thank you :)
+    - thank you a lot
+    - thank you bot
+    - thank you buddy
+    - thank you moviebot
+    - thank you so much
+    - thank you so much :)
+    - thank you so much a lot
+    - thank you so much bot
+    - thank you so much buddy
+    - thank you so much moviebot
+    - thank you so much!
+    - thank you so much, that's perfect
+    - thank you!
+    - thank you, that's perfect
+    - thanks
+    - thanks :)
+    - thanks a lot
+    - thanks a lot :)
+    - thanks a lot a lot
+    - thanks a lot bot
+    - thanks a lot moviebot
+    - thanks a lot!
+    - thanks a lot, that's perfect
+    - thanks bot
+    - thanks buddy
+    - thanks for the help
+    - thanks for the help :)
+    - thanks for the help a lot
+    - thanks for the help bot
+    - thanks for the help buddy
+    - thanks for the help moviebot
+    - thanks for the help!
+    - thanks for the help, that's perfect
+    - thanks moviebot
+    - thanks!
+    - thanks, that's perfect
+    - that's helpful
+    - that's helpful :)
+    - that's helpful a lot
+    - that's helpful bot
+    - that's helpful moviebot
+    - that's helpful!
+    - that's helpful, that's perfect
+    - thx
+    - thx :)
+    - thx bot
+    - thx buddy
+    - thx moviebot
+    - thx!
+    - thx, that's perfect
+    - ty
+    - ty :)
+    - ty a lot
+    - ty bot
+    - ty buddy
+    - ty!
+    - ty, that's perfect
+
+- intent: help
+  examples: |
+    - can you help me
+    - can you help me bot
+    - can you help me exactly
+    - can you help me moviebot
+    - can you help me please
+    - can you help me!
+    - can you help me, i'm lost
+    - can you help me?
+    - give me some examples
+    - give me some examples bot
+    - give me some examples exactly
+    - give me some examples moviebot
+    - give me some examples please
+    - give me some examples!
+    - give me some examples, i'm lost
+    - give me some examples?
+    - help
+    - help bot
+    - help exactly
+    - help moviebot
+    - help please
+    - help!
+    - help, i'm lost
+    - help?
+    - how can you help me
+    - how can you help me bot
+    - how can you help me exactly
+    - how can you help me moviebot
+    - how can you help me please
+    - how can you help me!
+    - how can you help me, i'm lost
+    - how can you help me?
+    - how do you work
+    - how do you work bot
+    - how do you work exactly
+    - how do you work moviebot
+    - how do you work please
+    - how do you work!
+    - how do you work, i'm lost
+    - how do you work?
+    - how does this work
+    - how does this work bot
+    - how does this work exactly
+    - how does this work moviebot
+    - how does this work please
+    - how does this work!
+    - how does this work, i'm lost
+    - how does this work?
+    - i need help
+    - i need help bot
+    - i need help exactly
+    - i need help moviebot
+    - i need help please
+    - i need help!
+    - i need help, i'm lost
+    - i need help?
+    - show me what you can do
+    - show me what you can do bot
+    - show me what you can do exactly
+    - show me what you can do moviebot
+    - show me what you can do please
+    - show me what you can do!
+    - show me what you can do, i'm lost
+    - show me what you can do?
+    - what are you able to do
+    - what are you able to do bot
+    - what are you able to do exactly
+    - what are you able to do moviebot
+    - what are you able to do please
+    - what are you able to do!
+    - what are you able to do, i'm lost
+    - what are you able to do?
+    - what are your features
+    - what are your features bot
+    - what are your features exactly
+    - what are your features moviebot
+    - what are your features please
+    - what are your features!
+    - what are your features, i'm lost
+    - what are your features?
+    - what can you do
+    - what can you do bot
+    - what can you do exactly
+    - what can you do moviebot
+    - what can you do please
+    - what can you do!
+    - what can you do, i'm lost
+    - what can you do?
+    - what do you know
+    - what do you know bot
+    - what do you know exactly
+    - what do you know moviebot
+    - what do you know please
+    - what do you know!
+    - what do you know, i'm lost
+    - what do you know?
+    - what kind of questions do you answer
+    - what kind of questions do you answer bot
+    - what kind of questions do you answer exactly
+    - what kind of questions do you answer moviebot
+    - what kind of questions do you answer please
+    - what kind of questions do you answer!
+    - what kind of questions do you answer, i'm lost
+    - what kind of questions do you answer?
+    - what questions can i ask
+    - what questions can i ask bot
+    - what questions can i ask exactly
+    - what questions can i ask moviebot
+    - what questions can i ask please
+    - what questions can i ask!
+    - what questions can i ask, i'm lost
+    - what questions can i ask?
+    - what should i ask you
+    - what should i ask you bot
+    - what should i ask you exactly
+    - what should i ask you moviebot
+    - what should i ask you please
+    - what should i ask you!
+    - what should i ask you, i'm lost
+    - what should i ask you?
+
+- intent: out_of_scope
+  examples: |
+    - ...
+    - ?
+    - asdf
+    - blue
+    - book a flight to dubai
+    - book a flight to lisbon
+    - book a flight to new york
+    - book a flight to rome
+    - book a flight to sydney
+    - buy me shoes
+    - call my mom
+    - can you do my homework
+    - can you drive
+    - car
+    - cat
+    - do you like pizza
+    - explain quantum physics
+    - film
+    - find me a hotel in barcelona
+    - find me a hotel in nice
+    - find me a hotel in paris
+    - find me a hotel in prague
+    - give me a recipe for a cake
+    - give me a recipe for cookies
+    - give me a recipe for lasagna
+    - give me a recipe for pizza
+    - give me a recipe for soup
+    - hmm
+    - how do airplanes fly
+    - how do i cook a steak
+    - how do i cook an omelette
+    - how do i cook pancakes
+    - how do i cook pasta
+    - how do i cook rice
+    - how do i fix my car
+    - how do i learn french
+    - how do i lose weight
+    - how do i make money
+    - how do i reset my password
+    - how far is the moon
+    - how many legs does a spider have
+    - how much is 11 times 2
+    - how much is 3 times 4
+    - how much is 6 times 7
+    - how much is 9 times 9
+    - how old is the earth
+    - how tall is the eiffel tower
+    - i need a taxi
+    - i'm hungry
+    - idk
+    - iron
+    - is coffee bad for you
+    - is it going to rain in lyon tomorrow
+    - is it going to rain in madrid tomorrow
+    - is it going to rain in oslo tomorrow
+    - is it going to rain in paris tomorrow
+    - lol
+    - movie
+    - no
+    - nothing
+    - ok
+    - order me a pizza
+    - play some classical music
+    - play some jazz music
+    - play some rap music
+    - play some rock music
+    - random
+    - recommend me a restaurant
+    - send an email to my boss
+    - set an alarm for 6:30
+    - set an alarm for 7am
+    - set an alarm for 8 o'clock
+    - set an alarm for noon
+    - tell me a joke
+    - test
+    - translate cat into spanish
+    - translate hello into spanish
+    - translate house into spanish
+    - translate thank you into spanish
+    - turn off the lights
+    - what
+    - what day is it today
+    - what is 10 plus 3
+    - what is 100 plus 1
+    - what is 12 plus 8
+    - what is 2 plus 2
+    - what is 5 plus 7
+    - what is love
+    - what is machine learning
+    - what is python
+    - what is the capital of france
+    - what time is it in london
+    - what time is it in new york
+    - what time is it in sydney
+    - what time is it in tokyo
+    - what's 2 to the power 10
+    - what's the best phone
+    - what's the meaning of life
+    - what's the news today
+    - what's the price of a tesla
+    - what's the price of an iphone
+    - what's the price of bitcoin
+    - what's the price of gold
+    - what's the score of the game
+    - what's the weather in berlin
+    - what's the weather in london
+    - what's the weather in paris
+    - what's the weather in rome
+    - what's the weather in tokyo
+    - what's your favorite color
+    - where do penguins live
+    - where is the nearest pharmacy
+    - who invented the internet
+    - who is the president of the usa
+    - who won the basketball match yesterday
+    - who won the football match yesterday
+    - who won the rugby match yesterday
+    - who won the tennis match yesterday
+    - why
+    - write me a poem
+    - yes
+
+- synonym: spider man
+  examples: |
+    - spiderman
+    - spider-man
+
+- synonym: the lord of the rings
+  examples: |
+    - lotr
+    - lord of the rings
+
+- synonym: star wars
+  examples: |
+    - starwars
+
+- synonym: avengers endgame
+  examples: |
+    - endgame
+    - avengers: endgame
+
+- synonym: the dark knight
+  examples: |
+    - dark knight
+
+- lookup: movie
+  examples: |
+    - iron man
+    - inception
+    - interstellar
+    - the dark knight
+    - titanic
+    - avatar
+    - the matrix
+    - gladiator
+    - jurassic park
+    - the godfather
+    - pulp fiction
+    - forrest gump
+    - fight club
+    - the lord of the rings
+    - spider man
+    - toy story
+    - finding nemo
+    - the lion king
+    - frozen
+    - shrek
+    - up
+    - coco
+    - joker
+    - parasite
+    - oppenheimer
+    - barbie
+    - dune
+    - avengers endgame
+    - black panther
+    - star wars
+    - back to the future
+    - the shawshank redemption
+    - schindler's list
+    - the untouchables
+    - amelie
+    - la la land
+    - whiplash
+    - gravity
+    - alien
+    - terminator
+    - rocky
+    - jaws
+    - e.t.
+    - psycho
+    - casablanca
+    - goodfellas
+    - the silence of the lambs
+    - saving private ryan
+    - the prestige
+    - memento
+    - tenet
+    - dunkirk
+    - django unchained
+    - inglourious basterds
+    - kill bill
+    - the social network
+    - gone girl
+    - se7en
+    - the revenant
+    - mad max fury road
+    - blade runner
+    - ratatouille
+    - wall-e
+    - inside out
+    - spirited away
+    - harry potter
+    - the hunger games
+    - pirates of the caribbean
+    - top gun
+    - mission impossible
+    - the truman show
+    - the grand budapest hotel
+    - her
+    - get out
+    - everything everywhere all at once
+    - no country for old men
+    - the green mile
+    - braveheart
+    - the departed
+    - heat
+    - shutter island
+    - catch me if you can
+    - the wolf of wall street
+    - moana
+    - encanto
+
+- lookup: person
+  examples: |
+    - christopher nolan
+    - steven spielberg
+    - quentin tarantino
+    - martin scorsese
+    - james cameron
+    - ridley scott
+    - denis villeneuve
+    - greta gerwig
+    - bong joon-ho
+    - david fincher
+    - wes anderson
+    - hayao miyazaki
+    - peter jackson
+    - tim burton
+    - leonardo dicaprio
+    - tom hanks
+    - brad pitt
+    - robert downey jr
+    - scarlett johansson
+    - meryl streep
+    - morgan freeman
+    - natalie portman
+    - keanu reeves
+    - tom cruise
+    - margot robbie
+    - ryan gosling
+    - emma stone
+    - denzel washington
+    - cillian murphy
+    - matt damon
+    - johnny depp
+    - zendaya
+    - timothee chalamet
+    - anne hathaway
+    - christian bale
+    - joaquin phoenix
+    - harrison ford
+    - al pacino
+    - robert de niro
+    - jennifer lawrence
